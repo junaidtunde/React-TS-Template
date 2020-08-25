@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router } from 'react-router-dom';
+import ThemeProvider from '@material-ui/styles/ThemeProvider';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import Bowser from 'bowser';
 import classnames from 'classnames';
 import whenDomReady from 'when-dom-ready';
@@ -10,6 +12,7 @@ import App from './App';
 import './index.scss';
 import * as serviceWorker from './serviceWorker';
 import history from 'get-history';
+import theme from 'theme';
 import { isMobile, isDesktop, isTablet } from 'helpers';
 
 import './css/style.css';
@@ -42,7 +45,10 @@ applyClassName();
 ReactDOM.render(
   <Router history={history}>
     <HelmetProvider>
-      <App />
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <App />
+      </ThemeProvider>
     </HelmetProvider>
   </Router>,
   root
