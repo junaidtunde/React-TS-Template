@@ -1,0 +1,53 @@
+.site-logo {
+    left: 50%;
+}
+
+//components/sub-components/shell/css/navigation.less
+.navigation {
+    &-wrapper {
+        min-height: 64px;
+
+        &.navigation-tab {
+            margin-left: $drawerWidth;
+            margin-top: 65px;
+            min-height: initial;
+        }
+    }
+}
+
+.grid {
+    grid-gap: 15px;
+}
+
+.page-content {
+    margin-left: $drawerWidth;
+
+    &.no-navigation {
+        margin-left: initial;
+    }
+
+    &.artist {
+        .top {
+            flex-direction: row;
+        }
+    }
+}
+
+.profile-link {
+    width: 90px;
+}
+
+@media (max-width: $desktopMinWidth) {
+    /* For tablet: */
+    .grid {
+        grid-gap: 10px;
+    }
+
+    .page-content {
+        margin-left: initial;
+
+        &.library {
+            margin-top: 50px;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-fixed {
+    flex: 0 0 auto;
+}
+
+.flex-grow {
+    flex: 1 0 auto;
+}
+
+.flex-elastic {
+    flex: 1 1 auto;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.flex-direction-row {
+    flex-direction: initial;
+}
+
+.flex-pull-left {
+    justify-content: flex-start;
+}
+
+.flex-pull-right {
+    justify-content: flex-end;
+}
+
+.flex-row {
+    flex-wrap: wrap;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.flex-justify-evenly {
+    justify-content: space-evenly;
+}
+
+.flex-justify-space-between {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-justify-space-around {
+    align-items: center;
+    justify-content: space-around;
+}

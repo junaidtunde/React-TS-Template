@@ -1,0 +1,7 @@
+.page-content {
+    background-color: red;
+
+    > * {
+        background-color: wheat;
+    }
+}

@@ -1,0 +1,16 @@
+@import './variables';
+@import './global';
+@import './partials/style';
+
+// @import '../components/shell/css/style';
+// @import '../pages/artists/artist/css/style';
+
+@media only screen and (max-width: $phoneMaxWidth) {
+    /* For small: */
+    @import './layout/small';
+}
+
+@media only screen and (min-width: $phoneMaxWidth) {
+    /* For large: */
+    @import './layout/large';
+}

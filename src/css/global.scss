@@ -1,0 +1,106 @@
+body,
+.root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0px;
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+}
+
+// #player {
+// visibility: hidden;
+// }
+
+a {
+    text-decoration: none;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.clear-float {
+    clear: both;
+}
+
+.button-wrapper {
+    margin: 20px 0px;
+    text-align: center;
+}
+
+.align-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.align-left-center {
+    align-items: center;
+    display: flex;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.form-wrapper {
+    text-align: center;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.spinner {
+    height: 100%;
+    width: 100%;
+}
+
+//TODO: fix other use-cases
+.desktop {
+    .copyright {
+        margin-bottom: 96px;
+    }
+}
+
+.track-playing.track-playing {
+    font-weight: bold;
+}
+
+google-cast-launcher {
+    --connected-color: $primary;
+    height: 24px;
+    width: 24px;
+
+    .player-control-maximized & {
+        --disconnected-color: white;
+    }
+
+    .desktop & {
+        align-self: flex-end;
+        display: inherit;
+        margin: 12px;
+        // height: 48px;
+        // width: 48px;
+    }
+}
+
+a {
+    &:link,
+    &:visited {
+        color: inherit;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

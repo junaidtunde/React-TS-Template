@@ -1,0 +1,31 @@
+$base: #FEC52D;
+$black_color: #000000;
+$blackColorSecondary: rgba(0, 0, 0, 0.87);
+$white_color: #ffffff;
+$primaryLight: #FEC52D;
+$primary: #FEC52D;
+$primaryDark: #FEC52D;
+
+$lightGrey: #dadce0;
+
+$phoneMaxSize: 600;
+$desktopMinSize: 993;
+
+$phoneMaxWidth: $phoneMaxSize * 1px;
+$desktopMinWidth: $desktopMinSize * 1px;
+
+$newVideos1: rgba(0, 50, 0, 0.8);
+$newVideos2: rgba(0, 50, 0, 0.7);
+
+$contactWrap1: rgba(0, 0, 0, 0.6);
+$contactWrap2: rgba(0, 0, 0, 0.6);
+
+$albumArtSize: 150;
+$desktopGrid: 800;
+
+$drawerWidth: 230px;
+
+//player-control
+$coverSize: 74px;
+$coverSizeLarge: 80px;
+$coverMaximizedSize: $coverSize - 20;
