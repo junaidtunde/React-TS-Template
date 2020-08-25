@@ -1,0 +1,120 @@
+{
+    "parser": "babel-eslint",
+    "globals": {},
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "jest": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "lesshint",
+        "plugin:react/recommended",
+        "prettier",
+        "react-app",
+        "plugin:import/recommended"
+        // "plugin:jsx-a11y/recommended"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
+        },
+        "sourceType": "module",
+        "ecmaVersion": 2018
+    },
+    "plugins": ["import", "jsx-a11y", "react", "react-hooks"],
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "import/resolver": {
+            "typescript": {
+                "alwaysTryTypes": true // always try to resolve types under `<roo/>@types` directory even it doesn't contain any source code, like `@types/unist`
+            },
+            "node": {
+                "paths": "src"
+            }
+        },
+        "typescript": {
+            "directory": "."
+        }
+    },
+    "rules": {
+        "arrow-body-style": "off",
+        "arrow-parens": "off",
+        "jsx-quotes": ["error", "prefer-single"],
+        "linebreak-style": ["error", "unix"],
+        "import/order": [
+            "warn",
+            {
+                "groups": [
+                    "builtin",
+                    "external",
+                    "internal",
+                    "parent",
+                    "sibling",
+                    "index"
+                ],
+                "pathGroups": [
+                    {
+                        "pattern": "src/**",
+                        "group": "internal"
+                    }
+                ],
+                "newlines-between": "always"
+            }
+        ],
+        "import/no-anonymous-default-export": [
+            "error",
+            {
+                "allowArray": false,
+                "allowArrowFunction": false,
+                "allowAnonymousClass": false,
+                "allowAnonymousFunction": false,
+                "allowCallExpression": true, // The true value here is for backward compatibility
+                "allowLiteral": false,
+                "allowObject": false
+            }
+        ],
+        "no-console": "off",
+        "no-debugger": "off",
+        "quotes": ["error", "single"],
+        "radix": "off",
+        "react-hooks/rules-of-hooks": "error",
+        "react/jsx-uses-vars": 2,
+        "react/prop-types": 1,
+        "semi": ["error", "always"],
+        "space-before-function-paren": "off",
+        "template-curly-spacing": ["error", "never"],
+        "func-style": [
+            "error",
+            "declaration",
+            {
+                "allowArrowFunctions": true
+            }
+        ]
+    },
+    "overrides": [
+        {
+            "files": ["**/*.ts?(x)"],
+            "parser": "@typescript-eslint/parser",
+            "parserOptions": {
+                "ecmaVersion": 2018,
+                "sourceType": "module",
+                "ecmaFeatures": {
+                    "jsx": true
+                },
+                "warnOnUnsupportedTypeScriptVersion": true,
+                "project": "./tsconfig.json"
+            },
+            "rules": {
+                "no-undef": "off",
+                "react/prop-types": 0
+            },
+            "plugins": ["@typescript-eslint"]
+        }
+    ]
+}
