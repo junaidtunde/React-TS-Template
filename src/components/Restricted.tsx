@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Redirect, Route, useLocation } from 'react-router-dom';
 
 import ROUTES from 'shared/routes';
+import { Loader } from 'components';
 // import { getIsLoggedIn } from 'queries';
 import { PageRoute, LocationState } from 'types';
 import { isAllowed } from 'helpers';
@@ -61,7 +62,11 @@ const Restricted = ({
                         );
                     }
                 }
-                return <Component {...props} />;
+                return (
+                    <Suspense fallback={<Loader />}>
+                        <Component {...props} />
+                    </Suspense>
+                );
             }}
         />
     );
